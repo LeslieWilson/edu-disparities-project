@@ -5,6 +5,7 @@ import ProjectsContainer from './containers/ProjectsContainer'
 import TitlePage from './components/TitlePage'
 import ForumContainer from './containers/ForumContainer'
 import SchoolMapContainer from './containers/SchoolMapContainer'
+import NewPost from './components/NewPost'
 
 
 
