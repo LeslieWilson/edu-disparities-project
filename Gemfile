@@ -7,6 +7,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 gem 'font-awesome-rails'
+gem 'omniauth-google-oauth2'
+gem 'dotenv-rails', groups: [:development, :test]
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'

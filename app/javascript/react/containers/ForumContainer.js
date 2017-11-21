@@ -1,16 +1,86 @@
 import React, {Component} from 'react';
+import PostTile from '../components/PostTile'
+import NewPost from '../components/NewPost'
+import { Route, Switch, Link } from 'react-router-dom'
+import NewPostLogin from '../components/NewPostLogin'
 
 class ForumContainer extends Component{
   constructor(props){
     super(props);
-    this.state = {}
+    this.state = {
+      posts: [],
+      current_user: {}
+    }
+    this.addNewPost = this.addNewPost.bind(this)
   }
 
-  render(){
+  componentDidMount() {
+    fetch('/api/v1/forums', {
+      credentials: 'same-origin',
+      method: 'GET',
+      headers: {}
+    })
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+          error = new Error(errorMessage);
+          throw(error);
+      }
+    })
+    .then(response => response.json())
+    .then(body => {
+      this.setState({
+        posts: body.posts,
+        current_user: body.current_user
+      })
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+
+  addNewPost(formPayload){
+    fetch('/api/v1/forums', {
+      credentials: 'same-origin',
+      headers: {'Accept': 'application/json',
+        'Content-Type': 'application/json'},
+      method: 'POST',
+      body: JSON.stringify({ post: formPayload })
+    })
+    .then(response => response.json())
+    .then(body => {
+      this.setState({ posts: body})
+    })
+  }
+
+  render(){console.log(this.state.current_user)
+
+    let postDisplay;
+    if(this.state.current_user != null){
+      postDisplay = <NewPost addNewPost={this.addNewPost}/>
+    }else {
+      postDisplay = <NewPostLogin />
+    }
+
+    let posts = this.state.posts.map(post => {
+      return (
+        <PostTile
+          key = {post.id}
+          id = {post.id}
+          body = {post.body}
+          title = {post.title}
+          username = {post.username}
+        />
+      )
+    })
+
     return(
       <div>
-        Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!Forum Project goes Here!
-        <i className="fa fa-address-book-o" aria-hidden="true"></i>
+        <div className="empty-space">
+        </div>
+        {postDisplay}
+        {posts}
+
       </div>
     )
   }
