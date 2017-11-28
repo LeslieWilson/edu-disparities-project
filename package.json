@@ -10,6 +10,7 @@
     "react": "^16.0.0",
     "react-arcgis": "^2.0.7",
     "react-dom": "^16.0.0",
+    "react-iframe": "^1.1.0",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
