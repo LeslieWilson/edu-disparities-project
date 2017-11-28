@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120180515) do
+ActiveRecord::Schema.define(version: 20171126213117) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "courses", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "title", null: false
@@ -24,6 +31,29 @@ ActiveRecord::Schema.define(version: 20171120180515) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "school_courses", force: :cascade do |t|
+    t.bigint "school_id", null: false
+    t.bigint "course_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_school_courses_on_course_id"
+    t.index ["school_id"], name: "index_school_courses_on_school_id"
+  end
+
+  create_table "schools", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "district"
+    t.string "school_type"
+    t.integer "students"
+    t.string "location"
+    t.decimal "lat"
+    t.decimal "lng"
+    t.integer "dollars_per_student"
+    t.string "number_of_ap_classes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "provider"
     t.string "uid"
@@ -32,6 +62,7 @@ ActiveRecord::Schema.define(version: 20171120180515) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
   end
 
 end

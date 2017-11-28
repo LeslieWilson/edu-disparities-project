@@ -14,5 +14,11 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    namespace :v1 do
+      resources :schools
+    end
+  end
+
   get '*path', to: 'pages#index'
 end

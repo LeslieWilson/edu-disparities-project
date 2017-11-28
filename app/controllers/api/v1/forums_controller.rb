@@ -37,4 +37,25 @@ class Api::V1::ForumsController < ApplicationController
     render json: object
   end
 
+  def destroy
+    post_id = params[:id]
+
+    post_to_delete = Post.find_by(id: post_id)
+    post_to_delete.delete
+
+    posts = Post.all.reverse
+
+    object = posts.map do |post|
+      user = post.user
+      {
+        id: post.id,
+        title: post.title,
+        body: post.body,
+        username: user.name
+      }
+    end
+    render json: object
+
+  end
+
 end
