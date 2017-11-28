@@ -12,6 +12,7 @@ class ForumContainer extends Component{
       current_user: {}
     }
     this.addNewPost = this.addNewPost.bind(this)
+    this.deletePost = this.deletePost.bind(this)
   }
 
   componentDidMount() {
@@ -53,8 +54,30 @@ class ForumContainer extends Component{
     })
   }
 
-  render(){console.log(this.state.current_user)
+  deletePost(post_id){
+    fetch(`/api/v1/forums/${post_id}`, {
+      credentials: 'same-origin',
+      headers: {},
+      method: 'DELETE'
+    })
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+        error = new Error(errorMessage);
+        throw(error);
+      }
+    })
+    .then(response => response.json())
+    .then(body => {
+      this.setState({ posts: body})
+    })
+  }
 
+  render(){
+
+    let deletePost = false;
     let postDisplay;
     if(this.state.current_user != null){
       postDisplay = <NewPost addNewPost={this.addNewPost}/>
@@ -62,7 +85,16 @@ class ForumContainer extends Component{
       postDisplay = <NewPostLogin />
     }
 
+    if(this.state.current_user != null){
+      if (this.state.current_user.admin){
+        deletePost=true
+      }
+    }
+
     let posts = this.state.posts.map(post => {
+      let handleDeletePost = () => {
+        this.deletePost(post.id)
+      }
       return (
         <PostTile
           key = {post.id}
@@ -70,6 +102,8 @@ class ForumContainer extends Component{
           body = {post.body}
           title = {post.title}
           username = {post.username}
+          deleteButton={deletePost}
+          handleClick={handleDeletePost}
         />
       )
     })
