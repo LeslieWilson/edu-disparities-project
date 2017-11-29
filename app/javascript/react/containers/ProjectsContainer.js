@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom'
 import NateTile from '../components/NateTile'
 import LeslieTile from '../components/LeslieTile'
+import SergeTile from '../components/SergeTile'
 
 const ProjectsContainer = props => {
   return(
@@ -9,9 +10,10 @@ const ProjectsContainer = props => {
       <div className="white-space">
       </div>
       <div className="title-container">
-        <h1 className="contributor-title"> Some info about our awesome contributors! </h1>
+        <h1 className="contributor-title"> About Us </h1>
       </div>
       <LeslieTile />
+      <SergeTile />
       <NateTile />
     </div>
   )
