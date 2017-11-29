@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PostTile = props => {
+const PostTile = props => {console.log(props.created_at)
   let deleteButton;
   if(props.deleteButton){
     deleteButton = <button onClick={props.handleClick}>Delete Post</button>
@@ -10,6 +10,7 @@ const PostTile = props => {
     <p>{props.username}</p>
     <p>{props.title}</p>
     <p>{props.body}</p>
+    <p>{props.created_at}</p>
     {deleteButton}
     </div>
   )
