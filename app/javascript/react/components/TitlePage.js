@@ -12,7 +12,7 @@ const TitlePage = props => {
     <div className="videoOverlay">
 
 
-  <Iframe url="https://www.youtube.com/embed/u1JfUvEPWwY"
+  <Iframe url="https://www.youtube.com/embed/u1JfUvEPWwY?modestbranding=1"
 
             width="60%"
             height="60%"

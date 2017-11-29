@@ -9,7 +9,8 @@ class Api::V1::ForumsController < ApplicationController
         id: post.id,
         title: post.title,
         body: post.body,
-        username: user.name
+        username: user.name,
+        created_at: post.created_at.strftime("Posted on %m/%d/%Y at %I:%M%p")
       }
     end
 

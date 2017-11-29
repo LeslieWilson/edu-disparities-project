@@ -92,7 +92,9 @@ class SchoolMapContainer extends Component {
     console.log(selectedSchool)
 
 
-    let selectSchool =  <select value={this.state.selectedSchool} onChange={this.handleSchoolSelect}> {this.state.renderredSchools.map(school => <option key={school.id} value={school.name}>{school.name}</option>
+    let selectSchool =  <select value={this.state.selectedSchool} onChange={this.handleSchoolSelect}>
+    <option disabled selected value> -- Select a School -- </option>
+    {this.state.renderredSchools.map(school => <option key={school.id} value={school.name}>{school.name}</option>
     )};
     </select>
 
