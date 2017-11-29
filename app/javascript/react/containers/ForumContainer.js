@@ -102,12 +102,13 @@ class ForumContainer extends Component{
           body = {post.body}
           title = {post.title}
           username = {post.username}
+          created_at = {post.created_at}
           deleteButton={deletePost}
           handleClick={handleDeletePost}
         />
       )
     })
-
+    console.log(posts)
     return(
       <div>
         <div className="empty-space">
