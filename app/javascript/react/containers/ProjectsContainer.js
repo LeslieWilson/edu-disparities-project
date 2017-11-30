@@ -13,8 +13,8 @@ const ProjectsContainer = props => {
         <h1 className="contributor-title"> About Us </h1>
       </div>
       <LeslieTile />
-      <SergeTile />
       <MariaTile />
+      <SergeTile />
       <NateTile />
     </div>
   )

@@ -62,30 +62,46 @@ class NewPost extends Component {
 }
     return(
       <div>
-        <div className="empty-space">
+        <div className="forum-photo">
+          <h1 className="forum-title">
+            Community Forum
+          </h1>
         </div>
-        <a href="/signout">Sign Out from google</a>
-        <ul>{errors}</ul>
-        <form className="new-post-form">
-        <label>Post Title:
-          <input
-            name={"title"}
-            value={this.state.title}
-            onChange={this.handleChange}
-            type="text"
-          />
-        </label>
+        <div className="forum-description">
+          <p>Science and technology are the tools of liberation. With those tools, we can collectively build a path to the future. Therefore, people of color, and sympathetic people of good will, must seize and construct that path or equality will remain just a dream deferred. This forum is meant to be a place to discuss their findings from the search engine, to ask questions, and address on a political level the inequalities they may be experiencing.
 
-        <label>Post Body:
-          <textarea
-            name={"body"}
-            value={this.state.body}
-            onChange={this.handleChange}
-            type="text"
-          />
-        </label>
-        <button className="submit-new-post" type="submit" onClick={this.handleSubmit}>Submit Post</button>
-        </form>
+
+</p>
+        </div>
+        <a href="/signout">Sign Out</a>
+        <ul>{errors}</ul>
+        <div className="form-container">
+            <div className="forum-text-container">
+              <p>This is a project to help liberate technology by opening the doors of educational opportunity and resources at an early age to POC. Helping families of color make better informed educational choices is a starting point in transforming the system. Enabling parents to compare science curricula in different districts is a way of empowering communities. Understanding this comparison helps level the playing field. A level playing field becomes a diverse and a fair playing field. As agents of change, we seek to create a safe space for this to happen.</p>
+            </div>
+          <form className="new-post-form">
+            <h1 className="new-forum-post">New Forum Post</h1>
+            <label>Title
+              <input
+                className="post-title"
+                name={"title"}
+                value={this.state.title}
+                onChange={this.handleChange}
+                type="text"
+              />
+            </label>
+
+            <label>Body
+              <textarea
+                name={"body"}
+                value={this.state.body}
+                onChange={this.handleChange}
+                type="text"
+              />
+            </label>
+            <button className="submit-new-post" type="submit" onClick={this.handleSubmit}>Submit Post</button>
+          </form>
+        </div>
       </div>
     )
   }

@@ -7,10 +7,14 @@ const PostTile = props => {console.log(props.created_at)
   }
   return(
     <div className="tile-container">
-    <p>{props.username}</p>
-    <p>{props.title}</p>
-    <p>{props.body}</p>
-    <p>{props.created_at}</p>
+
+    <div className="username-date">
+          <p>Posted by:  {props.username}</p>
+          <h1>{props.title}</h1>
+
+          <p>{props.created_at}</p>
+        </div>
+        <p>{props.body}</p>
     {deleteButton}
     </div>
   )
