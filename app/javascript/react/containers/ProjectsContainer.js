@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import NateTile from '../components/NateTile'
 import LeslieTile from '../components/LeslieTile'
 import SergeTile from '../components/SergeTile'
-
+import MariaTile from '../components/MariaTile'
 const ProjectsContainer = props => {
   return(
     <div className="projects-container">
@@ -14,6 +14,7 @@ const ProjectsContainer = props => {
       </div>
       <LeslieTile />
       <SergeTile />
+      <MariaTile />
       <NateTile />
     </div>
   )

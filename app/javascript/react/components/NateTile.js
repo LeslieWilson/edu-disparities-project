@@ -6,8 +6,8 @@ const NateTile = props => {
     <div className="nate-tile">
       <h1>Nate Weeks</h1>
       <img className="nate-photo"src="https://i.imgur.com/DuVdVUnm.jpg" />
-      <p> Ive acted as a mentor to leslie and serge helping them learn react and Ruby on Rails! Im a recent Launch Academy graduate and want to share my skills with others, and become a better teacher to help at-risk communities.</p>
-      <a href="admistus.herokuapp.com">Nates Project!</a>
+      <p> I have acted as a mentor for Resilient Coders who wished to learn React and Ruby on Rails and implement this project. Accessable science education is something I very much believe in. Thus over a few hour-long sessions per week, I have guided Leslie in her quest to create this React/Rails application, as she assists me with other projects I participate in. It has been a rewarding experience to watch this internet space be created. I am otherwise a Launch Academy graduate and want to share my back-end skills with others, and become a better teacher through practice.</p>
+      <a href="https://github.com/Nate-weeks">View Nates Github</a>
     </div>
   )
 }
