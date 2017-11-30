@@ -1,7 +1,86 @@
 div.empty-space{
-  height: 3rem;
+  height: 5.2rem;
+}
+
+div.forum-photo{
+  background-image: url('https://i.imgur.com/rfpZ8gM.png');
+  height: 20rem;
+  background-repeat: no-repeat;
+  background-size:100%;
+  display: flex;
+  justify-content: center;
+}
+
+h1.forum-title{
+  margin-top: 9rem;
+  color: white;
+  font-weight: bolder;
 }
 
 div.tile-container{
   border: 1px solid black;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 68%;
+  padding: 2rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  border-radius: 20px;
+}
+
+div.username-date{
+  display: flex;
+  justify-content: space-between;
+}
+
+form.new-post-form{
+  display: flex;
+  width: 47%;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  text-align: center;
+}
+
+div.forum-description{
+  height: 10rem;
+}
+
+div.forum-text-container{
+  width: 47%;
+}
+
+div.form-container{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+h1.new-forum-post{
+  margin: 0 auto;
+}
+
+input.post-title{
+  display: block;
+  width: 95%;
+  height: 2rem;
+}
+
+label{
+  display: block;
+  margin: 1rem;
+  font-size: 1.8rem;
+}
+
+textarea{
+  display: block;
+  width: 95%;
+  height: 100px;
+}
+
+button.submit-new-post{
+  width: 10%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  background-color: #FEFFF2;
 }

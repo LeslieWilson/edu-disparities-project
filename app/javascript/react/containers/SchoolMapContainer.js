@@ -113,18 +113,23 @@ class SchoolMapContainer extends Component {
       <div>
         <div className='empty-space'>
         </div>
+        <div className='map-content'>
+          <h1 className="map-title"> Science Curricula Search-Engine</h1>
+          <p>This will be a dynamic database where parents can search and compare science classes and curricula being offered to their children, especially computer science, to compare what schools in other (perhaps wealthier) neighborhoods are offering children.</p>
+        </div>
         <div className='map-container'>
+          <div className='school-info-container'>
+            {selectSchool}
+            {schoolInfo}
+          </div>
           <GoogleMap google={this.props.google}>
             {markers}
           </GoogleMap>
         </div>
-        {selectSchool}
-        {schoolInfo}
       </div>
     )
   }
 }
-
 export default GoogleApiWrapper({
   apiKey: ('AIzaSyCe7WjZWkloO3oaep__iTbZ4xc0Cd7iymc')
 })(SchoolMapContainer)

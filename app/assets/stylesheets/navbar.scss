@@ -7,9 +7,17 @@ h1.menu{
   float: right;
 }
 
-nav{
-  background-color: brown;
+nav.navbar{
+  background-color: #E8E0D5;
   width: 100%;
-  height: 3rem;
+  height: 5rem;
   position: fixed;
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  text-decoration: none;
 }

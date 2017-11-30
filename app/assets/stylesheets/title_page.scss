@@ -4,13 +4,29 @@ div.title{
   height: 72rem;
   background-repeat: no-repeat center;
   background-position: center center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.description-text1{
+  color: white;
+
+}
+
+.description-text2{
+  color: white;
+}
+
+.description-text3{
+  color: white;
 }
 
 div.videoOverlay{
-float:left;
-margin-left:25%;
-margin-top:40%;
-transform: rotate(8deg)
+transform: rotate(8deg);
+width: 50%;
+margin-top: 30rem;
+margin-left: 4rem;
 }
 
 div.title-text{
@@ -18,8 +34,4 @@ div.title-text{
   width: 50%;
   text-align: center;
   padding-top: 36rem;
-}
-
-.description-text{
-  color: red;
 }

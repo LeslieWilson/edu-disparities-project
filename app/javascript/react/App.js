@@ -6,7 +6,7 @@ import TitlePage from './components/TitlePage'
 import ForumContainer from './containers/ForumContainer'
 import SchoolMapContainer from './containers/SchoolMapContainer'
 import NewPost from './components/NewPost'
-
+import Footer from './components/Footer'
 
 
 const App = props => {
@@ -19,6 +19,7 @@ const App = props => {
       <Route exact path="/school-map" component={SchoolMapContainer}/>
       <Route exact path="/forum" component={ForumContainer}/>
       </Switch>
+      <Footer />
 
     </div>
   )

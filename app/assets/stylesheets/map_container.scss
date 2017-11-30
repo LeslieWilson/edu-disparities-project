@@ -1,4 +1,46 @@
 div.google-map{
-  height: 500px;
-  width: 500px;
+  height: 33rem;
+  width: 33rem;
+}
+
+h1.map-title{
+  text-align: center;
+}
+
+div.map-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem;
+  z-index: -1;
+}
+
+select{
+  height: 2.5rem;
+  width: 40%;
+  font-size: 1.3rem;
+  position: relative;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+option{
+  font-size: 1.5rem;
+}
+
+div.school-info-container{
+  width: 48%;
+  height: 33rem;
+  overflow: auto;
+  padding: 2rem;
+}
+
+p.course-names{
+  font-size: 0.1rem;
+}
+
+div.log-in{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
