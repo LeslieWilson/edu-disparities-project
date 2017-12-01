@@ -37,7 +37,7 @@ console.log(this.state.showVideo)
       className="myClassname"
       display="initial"
       position="relative"
-      allowFullScreen/>
+      />
 
     </div>
   } else {

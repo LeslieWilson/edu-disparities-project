@@ -4,6 +4,7 @@ import NateTile from '../components/NateTile'
 import LeslieTile from '../components/LeslieTile'
 import SergeTile from '../components/SergeTile'
 import MariaTile from '../components/MariaTile'
+import StephaneTile from '../components/StephaneTile'
 const ProjectsContainer = props => {
   return(
     <div className="meta-container">
@@ -17,6 +18,8 @@ const ProjectsContainer = props => {
       <MariaTile />
       <SergeTile />
       <NateTile />
+      <StephaneTile />
+
     </div>
     </div>
   )

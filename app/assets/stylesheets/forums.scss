@@ -26,7 +26,7 @@ div.tile-container{
   width: 68%;
   padding: 2rem;
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-bottom: 3rem;
   border-radius: 20px;
   background-color: #F7F7F7;
 }
@@ -42,6 +42,7 @@ form.new-post-form{
   flex-direction: column;
   background-color: #F6F6F6;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 div.forum-description{
@@ -54,13 +55,13 @@ div.forum-text-container{
 
 p.forum-text-top{
   padding: .2rem 2rem .2rem 2rem;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
 }
 
 p.forum-text-right{
   padding-right: 2rem;
   margin: 0;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
 }
 
 div.form-container{
