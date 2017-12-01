@@ -1,10 +1,17 @@
 div.google-map{
-  height: 33rem;
+  height: 37rem;
   width: 33rem;
 }
 
 h1.map-title{
   text-align: center;
+  font-size: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+p.map-description{
+  padding: 1rem 2.3rem 0 4.75rem;
+  font-size: 1.8rem;
 }
 
 div.map-container{
@@ -15,8 +22,8 @@ div.map-container{
 }
 
 select{
+  font-family: "Courier New", Courier, monospace;
   height: 2.5rem;
-  width: 40%;
   font-size: 1.3rem;
   position: relative;
   margin-top: 0;
@@ -32,6 +39,12 @@ div.school-info-container{
   height: 33rem;
   overflow: auto;
   padding: 2rem;
+  background-color: black;
+}
+
+div.school-info{
+  color: white;
+  font-family: "Courier New", Courier, monospace;
 }
 
 p.course-names{

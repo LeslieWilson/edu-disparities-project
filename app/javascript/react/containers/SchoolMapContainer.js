@@ -114,8 +114,8 @@ class SchoolMapContainer extends Component {
         <div className='empty-space'>
         </div>
         <div className='map-content'>
-          <h1 className="map-title"> Science Curricula Search-Engine</h1>
-          <p>This will be a dynamic database where parents can search and compare science classes and curricula being offered to their children, especially computer science, to compare what schools in other (perhaps wealthier) neighborhoods are offering children.</p>
+          <h1 className="map-title"> Science Curriculum Search-Engine</h1>
+          <p className = "map-description">This will be a dynamic database where parents can search and compare science classes and curricula being offered to their children, especially computer science, to compare what schools in other (perhaps wealthier) neighborhoods are offering children.</p>
         </div>
         <div className='map-container'>
           <div className='school-info-container'>
