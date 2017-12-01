@@ -6,6 +6,7 @@ import SergeTile from '../components/SergeTile'
 import MariaTile from '../components/MariaTile'
 const ProjectsContainer = props => {
   return(
+    <div className="meta-container">
     <div className="projects-container">
       <div className="white-space">
       </div>
@@ -16,6 +17,7 @@ const ProjectsContainer = props => {
       <MariaTile />
       <SergeTile />
       <NateTile />
+    </div>
     </div>
   )
 }

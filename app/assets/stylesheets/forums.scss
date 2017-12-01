@@ -1,20 +1,22 @@
 div.empty-space{
-  height: 5.2rem;
+  height: 5rem;
 }
 
 div.forum-photo{
   background-image: url('https://i.imgur.com/rfpZ8gM.png');
   height: 20rem;
-  background-repeat: no-repeat;
-  background-size:100%;
+  background-size: contain;
   display: flex;
   justify-content: center;
+  opacity: 0.8;
 }
 
 h1.forum-title{
-  margin-top: 9rem;
+  margin-top: 6.5rem;
   color: white;
   font-weight: bolder;
+  font-size: 5rem;
+  opacity: 1.0;
 }
 
 div.tile-container{
@@ -26,6 +28,7 @@ div.tile-container{
   margin: 0 auto;
   margin-top: 3rem;
   border-radius: 20px;
+  background-color: #F7F7F7;
 }
 
 div.username-date{
@@ -46,13 +49,25 @@ div.forum-description{
 }
 
 div.forum-text-container{
-  width: 47%;
+  width: 49%;
+}
+
+p.forum-text-top{
+  padding: .2rem 2rem .2rem 2rem;
+  font-size: 1.7rem;
+}
+
+p.forum-text-right{
+  padding-right: 2rem;
+  margin: 0;
+  font-size: 1.7rem;
 }
 
 div.form-container{
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  margin-left: 2rem;
 }
 
 h1.new-forum-post{
@@ -63,6 +78,10 @@ input.post-title{
   display: block;
   width: 95%;
   height: 2rem;
+}
+
+a.sign-out{
+  margin-left: 20rem;
 }
 
 label{
